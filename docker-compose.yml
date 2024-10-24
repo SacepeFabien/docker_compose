@@ -2,10 +2,10 @@ version: '3'
 
 services:
   frontend:
-    image: ollama-front:local
+    image: ghcr.io/aswinty/tp05:latest
     labels:
       - "traefik.http.routers.frontend.rule=Host(`frontend.localhost`)"
-      - "traefik.http.services.backend.loadbalancer.server.port=5001"
+      - "traefik.http.services.frontend.loadbalancer.server.port=5001"
 
   backend:
     image: onlydole/ollama-mistral:latest
