@@ -2,7 +2,7 @@ version: '3'
 
 services:
   frontend:
-    image: ghcr.io/aswinty/tp05:latest
+    image: ghcr.io/sacepefabien/back:latest
     labels:
       - "traefik.http.routers.frontend.rule=Host(`frontend.localhost`)"
       - "traefik.http.services.frontend.loadbalancer.server.port=5001"
